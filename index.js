@@ -1,9 +1,9 @@
-const shelf = document.querySelector('#shelf');
+const shelf = document.getElementById('shelf');
 const bookShelf = new Bookshelf();
 let addButton = document.getElementById(`add`);
 addButton.addEventListener(`click`, bookShelf.addNewBook)
 
-// Load in book data
+
 for (const bookInfo of bookData) {
   const book = new Book(
     bookInfo.author,
@@ -13,5 +13,5 @@ for (const bookInfo of bookData) {
   );
   bookShelf.addBook(book);
 }
-
+console.log(bookShelf)
 shelf.append(bookShelf.render());

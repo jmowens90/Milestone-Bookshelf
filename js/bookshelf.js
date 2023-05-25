@@ -26,14 +26,20 @@ class Bookshelf {
     
         if (author || language || subject || title) {
             let book = new Book(author, language, subject, title);
-            this.books.push(book);
+            //this.books.push(book); //--> literally kept getting an error that this.books was undefined, took me
+            //well over a few hours until I found an article that briefly mentioned that I didn't need to push 
+            // the book if I was trying to add it to an already existing array(i guess the append function takes
+            //care of that?). I honestly don't know why this works going to ask for some clarification on that.
 
             let ul = document.getElementById(`ul`);
             let li= book.render();
             ul.appendChild(li);
-        }
-        // let addButton = document.getElementById(`add`);
+            // check local storage on mdn to see about keeping the new books added to the database\
 
-        // addButton.addEventListener(`click`, bookShelf.addNewBook);
-  }
+            document.getElementById(`author`).value = ``;
+            document.getElementById(`language`).value = ``;
+            document.getElementById(`subject`).value = ``;
+            document.getElementById(`title`).value = ``;
+        }
+    }
 }

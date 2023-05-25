@@ -1,7 +1,7 @@
 const shelf = document.getElementById('shelf');
 const bookShelf = new Bookshelf();
 let addButton = document.getElementById(`add`);
-addButton.addEventListener(`click`, bookShelf.addNewBook)
+addButton.addEventListener(`click`, bookShelf.addNewBook);
 
 
 for (const bookInfo of bookData) {

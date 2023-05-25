@@ -6,8 +6,6 @@ body {
     background: #222;
   }
   
-  /* Just the UL styling all you need */
-  
   ul {
     margin: 0;
     padding: 0;
@@ -28,6 +26,18 @@ body {
     float: left;
     display: block;
     margin: 0 30px 0 0;
+  }
+
+  #comment {
+    float: right;
+  }
+
+  #textArea {
+    float: right;
+  }
+
+  #submitButton {
+    float: right;
   }
   
   

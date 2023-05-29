@@ -12,19 +12,22 @@ body {
     list-style: none;
   }
   
-  li {
+  #book {
+    display: flex;
     background-color: red;
     border: solid black 2px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
     width: 600px;
-    margin-top: 5px;
-    line-height: 1.5;
-    text-indent: -30px;
-    padding: 8px 0 8px 30px;
+    overflow: auto; 
   }
   
   li:before {
     float: left;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 30px 0 0;
   }
 
@@ -40,4 +43,35 @@ body {
     float: right;
   }
   
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 500px;
+    min-width: 250px;
+    min-height: 60px;
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
+    background-color: blue;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    border-style: solid;
+    color: white;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 30px;
+  color: black;
+}
   
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-links a {
+  flex-grow: 1;
+}
